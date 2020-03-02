@@ -1,5 +1,7 @@
-<h2><%= @post.title %></h2>
-<%= link_to "edit", edit_post_path(@post) %>
-<p>A <%= @post.category %> post.</p>
+<h2><%= @song.title %></h2>
+<%= link_to "edit", edit_song_path(@song) %>
+<p><%= @song.released %></p>
 <hr />
-<p><%= @post.content %></p>
+<p><%= @song.release_year %></p>
+<p><%= @song.artist_name %></p>
+<p><%= @song.genre %></p>
