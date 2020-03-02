@@ -27,7 +27,13 @@ class SongsController < ApplicationController
     end
 
     def update
-        @song.update(song_params)
+        @song.update(song_params(:title, :artist_name, :released, :release_year, :genre))
+        if @song.valid?
+            @song.save 
+            redirect_to song_path(@song)
+        else
+            render :edit
+        end
     end
 
     def destroy
@@ -46,6 +52,6 @@ class SongsController < ApplicationController
     end
 
     def song_params(*args)
-        params.permit(*args)
+        params.require(:song).permit(*args)
     end
 end
