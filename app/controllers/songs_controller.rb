@@ -14,7 +14,7 @@ class SongsController < ApplicationController
       redirect_to song_path(@song)
     else
       render :new
-    end
+    end #if
   end
 
   def show
@@ -26,9 +26,17 @@ class SongsController < ApplicationController
   end
 
   def update
+    set_song
+    if @song.update(song_params)
+      redirect_to song_path(@song)
+    else
+      render :edit 
+    end #if
   end
 
   def destroy
+    set_song.destroy
+    redirect_to songs_path
   end
 
   private
@@ -38,7 +46,7 @@ class SongsController < ApplicationController
   end
 
   def song_params
-    params.require(:song).permit(:title, :artist_name)
+    params.require(:song).permit(:title, :artist_name, :genre, :released, :release_year)
   end
 
 end
