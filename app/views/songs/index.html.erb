@@ -7,6 +7,7 @@
         <th>Released?</th>
         <th>Artist</th>
         <th>Genre</th>
+        <th>Edit Link</th>
       </tr>
     </thead>
     <tbody>
@@ -17,8 +18,10 @@
           <td><%= song.released ? "Yes" : "No" %></td>
           <td><%= song.artist_name %></td>
           <td><%= song.genre %></td>
+          <td><%= link_to "Edit", edit_song_path(song) %></td>
         </tr>
       <% end%>
     </tbody>
   </table>
+  <%= link_to "New Song", new_song_path %>
 </div>
