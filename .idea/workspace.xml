@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb9bb917-1f5d-47f2-9c42-45cc3eec4820" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/song.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/song.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584023291207</updated>
-      <workItem from="1584023297606" duration="9270000" />
+      <workItem from="1584023297606" duration="12286000" />
     </task>
     <servers />
   </component>
@@ -141,9 +139,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="12" y="21" width="873" height="988" key="dock-window-1" timestamp="1584045328683">
+    <state x="160" y="27" width="873" height="988" key="dock-window-1" timestamp="1584049418362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="12" y="21" width="873" height="988" key="dock-window-1/0.0.1920.1040/-1080.-833.1080.1880@0.0.1920.1040" timestamp="1584045328683" />
+    <state x="160" y="27" width="873" height="988" key="dock-window-1/0.0.1920.1040/-1080.-833.1080.1880@0.0.1920.1040" timestamp="1584049418362" />
   </component>
 </project>

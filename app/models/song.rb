@@ -1,6 +1,6 @@
 class Song < ApplicationRecord
   validates :title, presence: true
-  validates :released, inclusion: { in: %w(true false)}
+  validates :released, inclusion: { in: [true, false]}
   validates :artist_name, presence: true
 
   validate :title_artist_year_validation
@@ -8,7 +8,8 @@ class Song < ApplicationRecord
 
   def title_artist_year_validation
     # title cannot be repeated by the same artist in the same year
-    song = Song.find_by title: :title , artist_name: :artist_name,  release_year: :release_year
+    #binding.pry
+    song = Song.find_by title: title , artist_name: artist_name,  release_year: release_year
     if !song==nil
       errors.add(:title, "Title cannot be repeated by the same artist in the same year")
     end
@@ -22,9 +23,10 @@ class Song < ApplicationRecord
 =end
   def release_year_validation
     if(released)
-      if !release_year.present?
+      if release_year==nil
         errors.add(:release_year, "Release Year required for released songs.")
-        if (release_year >(Date.today.year))
+      else
+        if release_year >(Date.today.year)
           errors.add(:release_year, "Release Year must NOT be >=  current year")
         end
       end
