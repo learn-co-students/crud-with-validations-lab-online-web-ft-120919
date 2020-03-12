@@ -1,7 +1,18 @@
 class Song < ApplicationRecord
   validates :title, presence: true
+
+=begin
+  validates :title, uniqueness: {
+      scope: %i[release_year artist_name],
+      message: 'cannot be repeated by the same artist in the same year'
+  }
+=end
+
+
   validates :released, inclusion: { in: [true, false]}
   validates :artist_name, presence: true
+
+
 
   validate :title_artist_year_validation
   validate :release_year_validation
@@ -10,7 +21,8 @@ class Song < ApplicationRecord
     # title cannot be repeated by the same artist in the same year
     #binding.pry
     song = Song.find_by title: title , artist_name: artist_name,  release_year: release_year
-    if !song==nil
+    #song_exists=!(song==nil)
+    if song
       errors.add(:title, "Title cannot be repeated by the same artist in the same year")
     end
   end
