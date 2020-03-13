@@ -1,11 +1,13 @@
-<div>
+<tbody>
 <% @songs.each do |song| %> 
+<tr>
 <%= song.title %>
+<%= song.released %>
+<%= song.release_year %>
+<%= song.artist_name %>
+<%= song.genre %>
+<%= link_to "Destroy", song, method: :delete, data: { confirm: "Really?"}%>
+</tr>
 <%end%>
 
-<% @song.each do |song| %>
-<div class="song">
-<%= song.title %>
-<%= link_to "Delete", song, method: :delete, data: { confirm: "Really?"}%>
-</div>
-<%end%>
+</tbody>
