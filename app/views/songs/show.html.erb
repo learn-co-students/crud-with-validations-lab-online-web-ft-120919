@@ -1,0 +1,10 @@
+<% if @song.released %>
+Released in: <%= @song.release_year %>
+<% end %>
+<br>
+<%= @song.title %>
+<%= @song.artist_name %>
+<%= @song.genre %>
+
+<%= link_to "Delete", @song, method: :delete %>
+<%= link_to "Edit", edit_song_path(@song) %>

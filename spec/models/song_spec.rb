@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Song, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:valid_attributes) do
+    {
+      title: "Parachutes",
+      artist_name: "Balance and Composure",
+      release_year: 2015,
+      released: true,
+      genre: "Post hardcore"
+    }
+  end
+
+
 end
