@@ -1,0 +1,1 @@
+s = Song.create!(title: "Heya", released: true, artist_name: "OutKast", genre: "Funky hip-hop", release_year: 1990)
